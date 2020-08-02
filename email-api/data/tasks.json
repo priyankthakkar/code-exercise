@@ -1,0 +1,92 @@
+[
+  {
+    "range": "today",
+    "tasks": [
+      {
+        "id": 1,
+        "isSelected": false,
+        "isCompleted": false,
+        "assignee": "Resindot Sunflower",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "avatar": "https://robohash.org/consecteturenimpariatur.jpg?size=50x50&set=set1",
+        "duration": "1:22 AM",
+        "isStared": false
+      },
+      {
+        "id": 2,
+        "isSelected": false,
+        "isCompleted": true,
+        "assignee": "Flindersia",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "avatar": "https://robohash.org/animieosplaceat.png?size=50x50&set=set1",
+        "duration": "3:42 PM",
+        "isStared": false
+      },
+      {
+        "id": 3,
+        "isSelected": false,
+        "isCompleted": true,
+        "assignee": "Strigose Blacksamson",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "avatar": "https://robohash.org/cupiditaterepudiandaenulla.jpg?size=50x50&set=set1",
+        "duration": "11:18 PM",
+        "isStared": false
+      },
+      {
+        "id": 4,
+        "isSelected": true,
+        "isCompleted": true,
+        "assignee": "Taylor's Fawnlily",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "avatar": "https://robohash.org/quamutesse.bmp?size=50x50&set=set1",
+        "duration": "8:30 AM",
+        "isStared": false
+      },
+      {
+        "id": 5,
+        "isSelected": false,
+        "isCompleted": false,
+        "assignee": "Hueso Prieto",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "avatar": "https://robohash.org/aperiamofficiistemporibus.png?size=50x50&set=set1",
+        "duration": "7:50 AM",
+        "isStared": true
+      }
+    ]
+  },
+  {
+    "range": "tomorrow",
+    "tasks": [
+      {
+        "id": 1,
+        "isSelected": true,
+        "isCompleted": true,
+        "assignee": "Rio Grande Bugheal",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "avatar": "https://robohash.org/situtquo.bmp?size=50x50&set=set1",
+        "duration": "8:26 PM",
+        "isStared": false
+      },
+      {
+        "id": 2,
+        "isSelected": false,
+        "isCompleted": true,
+        "assignee": "Douglas' Bluegrass",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "avatar": "https://robohash.org/eiusminussapiente.bmp?size=50x50&set=set1",
+        "duration": "7:56 PM",
+        "isStared": false
+      },
+      {
+        "id": 3,
+        "isSelected": false,
+        "isCompleted": true,
+        "assignee": "Exasperated Melanelia Lichen abcdefghijklmno",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "avatar": "https://robohash.org/illumnobisveritatis.bmp?size=50x50&set=set1",
+        "duration": "3:40 AM",
+        "isStared": false
+      }
+    ]
+  }
+]
