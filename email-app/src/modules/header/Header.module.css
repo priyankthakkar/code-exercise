@@ -1,0 +1,75 @@
+.header {
+  grid-row: 1;
+  height: 100%;
+  background-color: #ffffff;
+  max-width: 93.125rem;
+  -webkit-box-shadow: 0rem 0.3125rem 0.1875rem 0rem rgba(176, 176, 176, 0.36);
+  -moz-box-shadow: 0rem 0.3125rem 0.1875rem 0rem rgba(176, 176, 176, 0.36);
+  box-shadow: 0rem 0.3125rem 0.1875rem 0rem rgba(176, 176, 176, 0.36);
+}
+
+.navBarIconContainer {
+  color: #b0b0b0;
+  font-size: 2.25rem;
+  padding: 0.875rem;
+  display: flex;
+  width: 13%;
+}
+
+.fuseSearch {
+  display: flex;
+  padding: 0.625rem;
+  width: 42%;
+}
+
+.searchContainer {
+  border: 1px solid #d8d8d8;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.searchContainer > input {
+  border: none;
+  width: 100%;
+}
+
+.searchIcon {
+  color: #b1b4c0;
+  margin: 0.3125rem;
+}
+
+.rightSideToolBar {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.headerAvatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #f4f4;
+  cursor: pointer;
+}
+
+.iconToolbarContainer {
+  color: #b1b4c0;
+  padding: 0.875rem 0.3125rem;
+}
+
+.toolbarIcon {
+  margin-right: 0.6125rem;
+}
+
+.focusModeContainer {
+  display: flex;
+  flex-direction: row;
+  color: #b1b4c0;
+  padding: 0.875rem 0.3125rem;
+}
