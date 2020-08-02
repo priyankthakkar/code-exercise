@@ -1,0 +1,202 @@
+.taskDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #d8d8d8;
+  cursor: pointer;
+}
+
+.taskDetailsContainerCompleted {
+  composes: taskDetailsContainer;
+  background-color: transparent;
+  color: #b0b0b0;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3e%3cline x1='8' y1='50' x2='64' y2='50' stroke-width='2' stroke='%23b0b0b0'/%3e%3c/svg%3e");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.checkboxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.875rem;
+}
+
+.isSelected {
+  color: #dbdde5;
+}
+
+.isSelectedActive {
+  color: #5273e9;
+}
+
+.isCompleted {
+  color: #dbdde5;
+}
+
+.isCompletedActive {
+  color: #5273e9;
+}
+
+.taskTitleContainer {
+  width: 15%;
+  max-width: 15%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.taskTitleContainer > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.taskDescriptionContaer {
+  width: 40%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 0.625rem;
+}
+
+.taskDescriptionContaer > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
+.tooltipStyle {
+  background-color: #dbdbdb !important;
+  color: black !important;
+  font-size: 0.875rem;
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  padding: 0px 14px;
+}
+
+.commonTextContainer {
+  display: flex;
+  align-items: center;
+  padding: 0px 14px;
+  width: 7%;
+}
+
+.isStaredContainer {
+  display: flex;
+  padding: 0.875rem 0rem;
+  justify-content: center;
+  width: 5%;
+}
+
+.isStared {
+  color: #dbdbdb;
+}
+
+.isStaredActive {
+  color: gold;
+}
+
+.taskTitle {
+  background-color: #ffffff;
+  padding: 0.625rem 0.875rem;
+  border-bottom: 1px solid #d8d8d8;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.taskToolbarContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.toolbarRightContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 65%;
+}
+
+.taskToolbarList {
+  list-style: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0.875rem;
+  width: 32%;
+}
+
+.taskToolbarList li {
+  padding-right: 10px;
+  color: #d8d8d8;
+  font-size: 25px;
+}
+
+.taskToolbarList li > a {
+  text-decoration: none;
+  color: #a0a0a0;
+}
+
+.activeLink {
+  color: #5273e9 !important;
+}
+
+.completionOptionContainer {
+  padding: 0.875rem 0rem;
+  width: 25%;
+}
+
+.toggleOn {
+  color: #5273e9;
+}
+
+.toggleText {
+  padding-left: 0.625rem;
+  font-size: 0.875rem;
+}
+
+.selectCss {
+  display: block;
+  font-size: 0.875rem;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.3125rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23585A5E%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"),
+    linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+.selectCss::-ms-expand {
+  display: none;
+}
+.selectCss:hover {
+  border-color: #888;
+}
+.selectCss:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #585a5e;
+  outline: none;
+}
+.selectCss option {
+  font-weight: normal;
+}
