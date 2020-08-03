@@ -5,6 +5,7 @@ import { createReduxStore } from "store";
 import App from "./App";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 ReactDOM.render(
   <React.StrictMode>

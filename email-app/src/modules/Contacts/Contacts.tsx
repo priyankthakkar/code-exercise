@@ -10,6 +10,7 @@ import {
   faCalendar,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import Loader from "react-loader-spinner";
 
 export const Contacts = () => {
   const dispatch = useDispatch();
@@ -22,14 +23,15 @@ export const Contacts = () => {
     dispatch(contactsActions.getContacts());
   }, [dispatch]);
 
-  let contactsContent: any = (
-    <>
-      <h6>Empty</h6>
-    </>
-  );
+  let contactsContent: any = <></>;
 
-  console.log(contactsResponse && contactsResponse.recordCount > 0);
-  if (contactsResponse && contactsResponse.recordCount > 0) {
+  if (isLoading) {
+    contactsContent = (
+      <div className={styles.contactLoader}>
+        <Loader visible={isLoading} type={"Rings"} />
+      </div>
+    );
+  } else if (contactsResponse && contactsResponse.recordCount > 0) {
     contactsContent = contactsResponse.contacts.map((contact) => {
       return (
         <div className={styles.contactContainer} key={contact.id}>
