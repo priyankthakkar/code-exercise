@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "app.interface";
 import TaskContainer from "modules/Task";
 import TaskToolbar from "modules/Task/TaskToolbar";
+import Loader from "react-loader-spinner";
 
 export const Content = () => {
   const dispatch = useDispatch();
@@ -15,9 +16,17 @@ export const Content = () => {
 
   let content: any = <></>;
 
-  content = tasksResponse.taskData.map((taskData) => (
-    <TaskContainer taskData={taskData} />
-  ));
+  if (isLoading) {
+    content = (
+      <div className={styles.contentLoaderSpinner}>
+        <Loader visible={isLoading} type={"Rings"} />
+      </div>
+    );
+  } else if (tasksResponse && tasksResponse.taskData) {
+    content = tasksResponse.taskData.map((taskData) => (
+      <TaskContainer taskData={taskData} />
+    ));
+  }
 
   useEffect(() => {
     dispatch(contentActions.getContent());

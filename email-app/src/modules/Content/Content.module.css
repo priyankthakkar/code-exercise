@@ -1,3 +1,12 @@
 .contentContainer {
   grid-column: 2;
 }
+
+.contentLoaderSpinner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 44.8rem;
+  justify-content: center;
+  align-items: center;
+}
