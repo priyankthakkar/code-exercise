@@ -7,6 +7,10 @@ import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
+/**
+ * Renders react application and wraps with redux store with the of
+ * Provider component.
+ */
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={createReduxStore()}>

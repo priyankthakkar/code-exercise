@@ -7,6 +7,15 @@ import TaskContainer from "modules/Task";
 import TaskToolbar from "modules/Task/TaskToolbar";
 import Loader from "react-loader-spinner";
 
+/**
+ * @function
+ * @name Content
+ *
+ * A functional component that forms the content container to render the tasks
+ * in the current case.
+ *
+ * @returns {JSX.Element}
+ */
 export const Content = () => {
   const dispatch = useDispatch();
 

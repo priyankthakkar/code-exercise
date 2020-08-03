@@ -9,6 +9,20 @@ export const defaultState: ContactsState = {
   },
 };
 
+/**
+ * @function
+ * @name contactsReducer
+ *
+ * A reducer function that reduces given action and state. It updates the received
+ * contacts and loading status to global state.
+ *
+ * @param state {ContactState} - current contacts state, if not passed it will use
+ * the default application state.
+ * @param action {ContactsActions} - contains the action that consists of type and
+ * payload which is either {boolean} or {ContactsResponse} as payload
+ *
+ * @returns {ContactsState} - update state
+ */
 export function contactsReducer(
   state: ContactsState = defaultState,
   action: ContactsActions

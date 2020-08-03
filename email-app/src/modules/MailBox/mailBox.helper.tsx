@@ -12,6 +12,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
+/**
+ * @function
+ * @name getIconForMailBoxItem
+ *
+ * A font awesome svg icon will be returned based on the give iconKey.
+ * @param {string} iconKey - string key identifyin icon uniquely.
+ *
+ * @returns {JSX.Element} - A font awesome svg icon.
+ */
 export const getIconForMailBoxItem = (iconKey: string) => {
   switch (iconKey) {
     case INBOX:

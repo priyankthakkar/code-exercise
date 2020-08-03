@@ -12,6 +12,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Loader from "react-loader-spinner";
 
+/**
+ * @function
+ * @name Contacts
+ *
+ * A functional component, that displays the contacts list. Reads contacts from global state.
+ *
+ * @returns {JSX.Element}
+ */
 export const Contacts = () => {
   const dispatch = useDispatch();
 

@@ -8,6 +8,18 @@ export const defaultState: ContentState = {
   },
 };
 
+/**
+ * @function
+ * @name contentReducer
+ *
+ * A reducer function that reduces and action and updates the received tasks
+ * to global state of the application.
+ *
+ * @param {ContentState} state - current state for the content
+ * @param {ContentActionType} action - contains type of the action and payload
+ *
+ * @returns {ContentState} - updated state
+ */
 export function contentReducer(
   state: ContentState = defaultState,
   action: ContentActions
