@@ -1,0 +1,36 @@
+.mailBoxContainer {
+  grid-column: 1;
+  margin: 0.625rem;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mailBoxItemGroup {
+  border-bottom: 1px solid #d8d8d8;
+  padding: 0.875rem 0rem;
+}
+
+.mailBoxItemContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 0.625rem;
+}
+
+.mailBoxItemIcon {
+  width: 15%;
+  color: #b1b4c0;
+}
+
+.mailBoxItemIconSelected {
+  composes: mailBoxItemIcon;
+  color: #5273e9;
+}
+
+.mailBoxItemText {
+  width: 75%;
+}
+
+.mailBoxItemCount {
+  color: #b1b4c0;
+}
