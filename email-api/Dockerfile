@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:14-alpine
 
 #creating the app directory
 WORKDIR /usr/src/email-api

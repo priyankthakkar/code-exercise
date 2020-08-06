@@ -1,0 +1,85 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "command": ["serve", "-s", "build"],
+      "environment": [
+        {
+          "name": "REACT_APP_PORT",
+          "value": "5000"
+        }
+      ],
+      "essential": true,
+      "links": ["server"],
+      "mountPoints": [
+        {
+          "containerPath": "/usr/src/email-app/src",
+          "sourceVolume": "_Email-AppSrc"
+        },
+        {
+          "containerPath": "/usr/src/email-api/public",
+          "sourceVolume": "_Email-AppPublic"
+        }
+      ],
+      "name": "client",
+      "image": "priyankthakkar/email-app",
+      "memory": 512,
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "hostPort": 5000
+        }
+      ]
+    },
+    {
+      "command": ["node", "index.js"],
+      "environment": [
+        {
+          "name": "API_HOST",
+          "value": "http://localhost:4000"
+        },
+        {
+          "name": "APP_SERVER_PORT",
+          "value": "4000"
+        }
+      ],
+      "essential": true,
+      "mountPoints": [
+        {
+          "containerPath": "/usr/src/email-api/src",
+          "sourceVolume": "_Email-ApiSrc"
+        }
+      ],
+      "name": "server",
+      "image": "priyankthakkar/email-api",
+      "memory": 512,
+      "portMappings": [
+        {
+          "containerPort": 4000,
+          "hostPort": 4000
+        }
+      ]
+    }
+  ],
+  "family": "",
+  "volumes": [
+    {
+      "host": {
+        "sourcePath": "./email-api/src"
+      },
+      "name": "_Email-ApiSrc"
+    },
+    {
+      "host": {
+        "sourcePath": "./email-app/src"
+      },
+      "name": "_Email-AppSrc"
+    },
+    {
+      "host": {
+        "sourcePath": "./email-app/public"
+      },
+      "name": "_Email-AppPublic"
+    }
+  ]
+}
