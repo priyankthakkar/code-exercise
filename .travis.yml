@@ -15,8 +15,8 @@ after_success:
     docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
     docker-compose build ;
     docker image ls ;
-    docker tag coding-exercise_server $DOCKER_USERNAME/email-api ;
-    docker tag coding-exercise_client $DOCKER_USERNAME/email-app ;
+    docker tag code-exercise_server $DOCKER_USERNAME/email-api ;
+    docker tag code-exercise_client $DOCKER_USERNAME/email-app ;
 
     docker push $DOCKER_USERNAME/email-api ;
     docker push $DOCKER_USERNAME/email-app ;
