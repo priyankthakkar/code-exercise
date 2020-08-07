@@ -1,0 +1,35 @@
+language: python
+
+services:
+  - docker
+
+before_script: pip install docker-compose
+
+script:
+  # since there's a dependency on mongo, it will build that image also
+  # although we have not added any tests scenario
+  - echo 'test'
+
+after_success:
+  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
+    docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
+    docker-compose build ;
+    docker tag coding-exercise_server $DOCKER_USERNAME/email-api ;
+    docker tag coding-exercise_client $DOCKER_USERNAME/email-app ;
+
+    docker push $DOCKER_USERNAME/email-api ;
+    docker push $DOCKER_USERNAME/email-app ;
+
+    fi
+
+deploy:
+  provider: elasticbeanstalk
+  region: ap-southeast-2
+  app: email-exercise
+  env: EmailExercise-env
+  bucket-name: elasticbeanstalk-ap-southeast-2-679507642259
+  bucket-path: email-exercise
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
