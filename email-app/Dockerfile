@@ -1,19 +1,4 @@
-FROM ubuntu:bionic
-
-# update 
-RUN apt-get update
-# install curl 
-RUN apt-get install curl -y
-# get install script and pass it to execute: 
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash
-# and install node 
-RUN apt-get install nodejs -y
-# confirm that it was successful 
-RUN node -v
-# npm installs automatically 
-RUN npm -v \
-    && npm i -g yarn \
-    && yarn --version
+FROM node:14
 
 WORKDIR /usr/src/email-app
 
@@ -24,6 +9,8 @@ COPY yarn.lock ./
 COPY . .
 
 RUN yarn install && yarn build
+
+RUN rm -rf node_modules
 
 RUN npm install -g serve
 
