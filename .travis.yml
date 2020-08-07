@@ -14,7 +14,7 @@ after_success:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
     docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
     docker-compose build ;
-    docker-image ls ;
+    docker image ls ;
     docker tag coding-exercise_server $DOCKER_USERNAME/email-api ;
     docker tag coding-exercise_client $DOCKER_USERNAME/email-app ;
 
