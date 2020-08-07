@@ -23,7 +23,8 @@
       ],
       "name": "client",
       "image": "priyankthakkar/email-app",
-      "memory": 1024,
+      "memory": 256,
+      "cpu": 1,
       "portMappings": [
         {
           "containerPort": 5000,
@@ -52,7 +53,8 @@
       ],
       "name": "server",
       "image": "priyankthakkar/email-api",
-      "memory": 1024,
+      "memory": 256,
+      "cpu": 1,
       "portMappings": [
         {
           "containerPort": 4000,
