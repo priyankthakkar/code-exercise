@@ -67,19 +67,19 @@
   "volumes": [
     {
       "host": {
-        "sourcePath": "./email-api/src"
+        "sourcePath": "/usr/src/email-api/src"
       },
       "name": "Email-ApiSrc"
     },
     {
       "host": {
-        "sourcePath": "./email-app/src"
+        "sourcePath": "/usr/src/email-app/src"
       },
       "name": "Email-AppSrc"
     },
     {
       "host": {
-        "sourcePath": "./email-app/public"
+        "sourcePath": "/usr/src/email-app/public"
       },
       "name": "Email-AppPublic"
     }
