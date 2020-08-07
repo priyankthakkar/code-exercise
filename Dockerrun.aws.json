@@ -14,11 +14,11 @@
       "mountPoints": [
         {
           "containerPath": "/usr/src/email-app/src",
-          "sourceVolume": "_Email-AppSrc"
+          "sourceVolume": "Email-AppSrc"
         },
         {
           "containerPath": "/usr/src/email-api/public",
-          "sourceVolume": "_Email-AppPublic"
+          "sourceVolume": "Email-AppPublic"
         }
       ],
       "name": "client",
@@ -48,7 +48,7 @@
       "mountPoints": [
         {
           "containerPath": "/usr/src/email-api/src",
-          "sourceVolume": "_Email-ApiSrc"
+          "sourceVolume": "Email-ApiSrc"
         }
       ],
       "name": "server",
@@ -69,19 +69,19 @@
       "host": {
         "sourcePath": "./email-api/src"
       },
-      "name": "_Email-ApiSrc"
+      "name": "Email-ApiSrc"
     },
     {
       "host": {
         "sourcePath": "./email-app/src"
       },
-      "name": "_Email-AppSrc"
+      "name": "Email-AppSrc"
     },
     {
       "host": {
         "sourcePath": "./email-app/public"
       },
-      "name": "_Email-AppPublic"
+      "name": "Email-AppPublic"
     }
   ]
 }
