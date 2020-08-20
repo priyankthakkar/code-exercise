@@ -1,6 +1,7 @@
 import { takeLatest, call, put } from "redux-saga/effects";
 import { ContentActionType } from "./content.actions";
 import axios from "axios";
+import { CONFIG } from "index";
 
 /**
  * @function
@@ -15,8 +16,7 @@ import axios from "axios";
 export function* workerContentSaga() {
   try {
     yield put({ type: ContentActionType.IS_LOADING, payload: true });
-
-    const result = yield call(axios.get, "http://localhost:4000/tasks");
+    const result = yield call(axios.get, `${CONFIG.API_HOST}/tasks`);
     console.log(result.data);
     if (result && result.data) {
       yield put({

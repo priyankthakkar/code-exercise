@@ -6,6 +6,9 @@ import App from "./App";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { loadConfig } from "modules/shared/helpers/configHelper";
+
+export const CONFIG = loadConfig(process.env.NODE_ENV);
 
 /**
  * Renders react application and wraps with redux store with the of

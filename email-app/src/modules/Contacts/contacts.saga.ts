@@ -1,6 +1,7 @@
 import { takeLatest, call, put } from "redux-saga/effects";
 import { ContactsActionType } from "./contacts.actions";
 import axios from "axios";
+import { CONFIG } from "index";
 
 /**
  * @function
@@ -16,7 +17,7 @@ export function* workerContactsSaga() {
   try {
     yield put({ type: ContactsActionType.IS_LOADING, payload: true });
 
-    const result = yield call(axios.get, "http://localhost:4000/contacts");
+    const result = yield call(axios.get, `${CONFIG.API_HOST}/contacts`);
 
     if (result && result.data && result.data.contacts) {
       yield put({
